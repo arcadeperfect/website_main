@@ -1,0 +1,65 @@
+/* src/css/style.css */
+* {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.5;
+  background: var(--light-color);
+  color: green;
+}
+
+a:link, a:visited, a:hover, a:active {
+  color: inherit; /* Use inherit to keep the same color as the surrounding text */
+  text-decoration: none; /* Ensure no underline on hover, active, etc. */
+}
+
+p {
+  font-size: 17px;
+  font-weight: lighter;
+}
+
+ul{
+  list-style-type: none;
+  color: red;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(auto, 500px) 1fr 100px;
+  height: 100vh; /* This ensures the grid takes the full height of the viewport */
+}
+
+.side-text {
+  font-size: 200px;
+  word-wrap: break-word;
+  overflow-wrap: break-word; /* Ensures compatibility across different browsers */
+}
+
+.title {
+  text-align: left;
+}
+
+/* Home main section styles */
+.home-main {
+  background-color: #5de87d; /* Example background color for home page */
+  padding: 2rem;
+  grid-column: 1;
+}
+
+/* Post main section styles */
+.post-main {
+  background-color: #fffacd; /* Example background color for post pages */
+  padding: 2rem;
+  grid-column: 1;
+}
+
+/* Sidebar styles */
+.sidebar {
+  background-color: #f4f4f4;
+  grid-column: 3;
+}
+

@@ -1,0 +1,14 @@
+<!-- src/_includes/layouts/post.njk -->
+{% extends "layouts/base.njk" %}
+
+{% block styles %}
+<link rel="stylesheet" href="/css/post.css">
+{% endblock %}
+
+{% block main %}
+<article>
+    <h1>{{ title }}</h1>
+    <p>{{ date | date("MMMM D, YYYY") }}</p>
+    <div>{{ content | safe }}</div>
+</article>
+{% endblock %}

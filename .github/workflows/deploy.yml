@@ -1,0 +1,37 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # or the default branch of your repository
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout the repository
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build the site
+      run: npx eleventy
+
+    - name: Debug git status
+      run: |
+        git status
+        git log -n 5
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        publish_dir: ./_site
+        force_orphan: true  # Ensure a clean state by forcing an orphan branch
