@@ -27,9 +27,22 @@ ul{
   color: red;
 }
 
+h1{
+  font-size: 145px;
+}
+
+h2{
+  font-size: 65px;
+}
+
+h3{
+  font-weight: lighter;
+  font-size: 50px;
+}
+
 .grid {
   display: grid;
-  grid-template-columns: minmax(auto, 700px) 1fr 250px;
+  grid-template-columns: minmax(auto, 1200px) 1fr 350px;
   height: 100vh; /* This ensures the grid takes the full height of the viewport */
 }
 
@@ -41,11 +54,12 @@ ul{
 
 .title {
   text-align: left;
+
 }
 
 /* Home main section styles */
 .home-main {
-  background-color: #5de87d; /* Example background color for home page */
+  background-color: #8afdaa; /* Example background color for home page */
   padding: 2rem;
   grid-column: 1;
 }
