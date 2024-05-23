@@ -19,7 +19,7 @@ module.exports = function(eleventyConfig) {
 
   return {
     // pathPrefix: "/website_01/",  // Add your repository name here if it’s a project site
-    pathPrefix: site.baseUrl,
+    pathPrefix: "/website_02/",
     dir: {
       input: "src",
       includes: "_includes",

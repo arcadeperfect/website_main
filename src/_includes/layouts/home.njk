@@ -9,7 +9,7 @@
 <ul>
     {% for post in collections.posts %}
         <li>
-            <a href="{{ site.baseUrl }}{{ post.url }}">{{ post.data.title }}</a>
+            <a href="{{ pathPrefix }}posts/{{ post.fileSlug }}/">{{ post.data.title }}</a>
         </li>
     {% endfor %}
 </ul>
