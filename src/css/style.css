@@ -29,7 +29,7 @@ ul{
 
 .grid {
   display: grid;
-  grid-template-columns: minmax(auto, 800px) 1fr 250px;
+  grid-template-columns: minmax(auto, 700px) 1fr 250px;
   height: 100vh; /* This ensures the grid takes the full height of the viewport */
 }
 
