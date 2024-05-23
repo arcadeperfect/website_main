@@ -1,10 +1,9 @@
-<!-- src/_includes/layouts/base.njk -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/{{ pathPrefix }}css/style.css">
+    <link rel="stylesheet" href="{{ site.pathPrefix }}css/style.css">
     {% block styles %}{% endblock %}
     <title>{{ title }}</title>
 </head>
@@ -15,7 +14,7 @@
         </div>
         <div class="item sidebar">
             <h1 class="title"></h1>
-            <a href="{{ pathPrefix }}" class="side-text">
+            <a href="{{ site.pathPrefix }}" class="side-text">
                 alexanderharding
             </a>
         </div>

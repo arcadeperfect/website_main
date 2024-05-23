@@ -1,4 +1,3 @@
-<!-- src/_includes/layouts/home.njk -->
 {% extends "layouts/base.njk" %}
 
 {% block main %}
@@ -9,7 +8,7 @@
 <ul>
     {% for post in collections.posts %}
         <li>
-            <a href="{{ pathPrefix }}posts/{{ post.fileSlug }}/">{{ post.data.title }}</a>
+            <a href="{{ site.pathPrefix }}posts/{{ post.fileSlug }}/">{{ post.data.title }}</a>
         </li>
     {% endfor %}
 </ul>
