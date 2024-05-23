@@ -1,3 +1,4 @@
 {
-    "title": "My 11ty Site"
+  "title": "My 11ty Site",
+  "pathPrefix": "/website_02/"
 }
