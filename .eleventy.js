@@ -1,4 +1,6 @@
 const dateFilter = require('nunjucks-date-filter');
+const site = require("./src/_data/site");
+
 
 module.exports = function(eleventyConfig) {
   // Register the date filter
@@ -17,7 +19,7 @@ module.exports = function(eleventyConfig) {
 
   return {
     // pathPrefix: "/website_01/",  // Add your repository name here if it’s a project site
-
+    pathPrefix: site.baseUrl,
     dir: {
       input: "src",
       includes: "_includes",
