@@ -2,7 +2,7 @@
 title: "Space Game"
 layout: layouts/post.njk
 order: 3
-colorScheme: 2
+colorScheme: 3
 ---
 
 
