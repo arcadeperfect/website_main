@@ -99,6 +99,8 @@ p {
 .sidebar-column {
   background-color: var(--base-sidebar-bg);
   color: var(--base-sidebar-text);
+  position: relative;
+  z-index: 1;
 }
 
 /* HOME PAGE STYLGING */
@@ -135,6 +137,8 @@ a:hover{
   display: flex;
   flex-direction: column;
   gap: 10px; /* Adjust the gap between social links */
+  position: relative;
+  z-index: 2;
 }
 
 .big-side-text {
@@ -145,6 +149,8 @@ a:hover{
   font-weight: var(--heading-weight);
   padding-top: 0px;
   padding-left: 5px;
+  position: relative;
+  z-index: 1;
 }
 
 /* VIDEO PLAYER STYLING */
