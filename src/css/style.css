@@ -20,6 +20,7 @@ a:link, a:visited, a:hover, a:active {
 p {
   font-size: 17px;
   font-weight: lighter;
+  max-width: 850px;
 }
 
 ul{
@@ -28,6 +29,8 @@ ul{
 }
 
 h1{
+  text-align: justify;
+  /* font-weight: light; */
   font-size: 145px;
 }
 
@@ -42,19 +45,25 @@ h3{
 
 .grid {
   display: grid;
-  grid-template-columns: minmax(auto, 1200px) 1fr 350px;
+  grid-template-columns: minmax(100px, 1300px) 1fr 250px;
   height: 100vh; /* This ensures the grid takes the full height of the viewport */
 }
 
 .side-text {
-  font-size: 200px;
+  /* font-size: 200px; */
   word-wrap: break-word;
   overflow-wrap: break-word; /* Ensures compatibility across different browsers */
 }
 
+.social {
+  display: block;
+  line-height: 1;
+  margin: 2px 0; /* Adjust this value as needed */
+}
+
+
 .title {
   text-align: left;
-
 }
 
 /* Home main section styles */
@@ -64,6 +73,10 @@ h3{
   grid-column: 1;
 }
 
+.home-main ~ .middle {
+  background-color: #8afdaa; /* Same color as home main */
+}
+
 /* Post main section styles */
 .post-main {
   background-color: #fffacd; /* Example background color for post pages */
@@ -71,9 +84,55 @@ h3{
   grid-column: 1;
 }
 
-/* Sidebar styles */
-.sidebar {
-  background-color: #f4f4f4;
-  grid-column: 3;
+.post-main ~ .middle {
+  background-color: #fffacd; /* Same color as post main */
 }
 
+/* Sidebar styles */
+/* .sidebar {
+  background-color: #f4f4f4;
+  grid-column: 3;
+} */
+
+.sidebar {
+  background-color: #f4f4f4;  /* Default color for the home page */
+  /* Other sidebar styles */
+  line-height: 100px;
+  padding: 50px 10px;
+}
+
+.sidebar.post-sidebar {
+  background-color: #ffffff;  /* Different color for post pages */
+  /* Other sidebar styles for post pages */
+}
+
+.side-text {
+  color: black;  /* Example default color for the sidebar text */
+}
+
+
+.sidebar.post-sidebar .side-text {
+  color: rgb(225, 53, 53);  /* Example different color for the sidebar text on post pages */
+}
+
+.big-side-text {
+  font-size: 200px;
+  word-wrap: break-word;
+  overflow-wrap: break-word; /* Ensures compatibility across different browsers */
+  line-height: 170px;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
