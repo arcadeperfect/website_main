@@ -111,6 +111,10 @@ p {
   font-size: 24px;
 }
 
+a:hover{
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive; /* Default font */
+}
+
 /* MAIN COLUMN STYLING */
 
 .main-heading {
