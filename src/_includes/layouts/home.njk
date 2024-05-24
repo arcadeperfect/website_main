@@ -1,17 +1,12 @@
 {% extends "layouts/base.njk" %}
 
 {% block main %}
-<h1 class="title">Ooooooooo</h1>
-{# <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit...</h2> #}
-<br><br>
-<!-- Loop through the sorted collection of posts -->
-<ul>
+<h1 class="main-heading">oooooooo</h1>
+<div class="main-menu">
     {% for post in collections.posts %}
-        <li>
-            <h3>
+        {# <li> #}
             <a href="{{ site.pathPrefix }}posts/{{ post.fileSlug }}/">{{ post.data.title }}</a>
-            </h3>
-        </li>
+        {# </li> #}
     {% endfor %}
-</ul>
+</div>
 {% endblock %}

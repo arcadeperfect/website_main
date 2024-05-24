@@ -1,132 +1,156 @@
-/* src/css/style.css */
+:root {
+  --base-main-bg: black;
+  --base-main-text: white;
+  --base-sidebar-bg: white;
+  --base-sidebar-text: black;
+  --heading-weight: normal;
+}
+
+/* Alternate Color Scheme 1 */
+.color-scheme-1 {
+  --base-main-bg: #f0f8ff;
+  --base-main-text: #f50000;
+  --base-sidebar-bg: #333;
+  --base-sidebar-text: #f0f8ff;
+}
+
+/* Alternate Color Scheme 2 */
+.color-scheme-2 {
+  --base-main-bg: #00ff15;
+  --base-main-text: #111;
+  --base-sidebar-bg: #111;
+  --base-sidebar-text: #ffebcd;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* RESET */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 * {
   margin: 0;
-  padding: 0;
-  text-align: left;
 }
 
 body {
-  font-family: 'Lato', sans-serif;
   line-height: 1.5;
-  background: var(--light-color);
-  color: green;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+#root, #__next {
+  isolation: isolate;
 }
 
-a:link, a:visited, a:hover, a:active {
-  color: inherit; /* Use inherit to keep the same color as the surrounding text */
-  text-decoration: none; /* Ensure no underline on hover, active, etc. */
+a {
+  text-decoration: none;
+  color: inherit;
 }
+
+ul {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+/* BASE STYLING */
+
+body {
+  font-family: "Roboto", sans-serif;
+  /* font-family: "Roboto Mono", monospace; */
+}
+
+h1 {
+  font-size: 145px;
+  font-weight: var(--heading-weight);
+}   
 
 p {
   font-size: 17px;
-  font-weight: lighter;
-  max-width: 850px;
+  max-width: 650px;
 }
 
-ul{
-  list-style-type: none;
-  color: red;
-}
-
-h1{
-  text-align: justify;
-  /* font-weight: light; */
-  font-size: 145px;
-}
-
-h2{
-  font-size: 65px;
-}
-
-h3{
-  font-weight: lighter;
-  font-size: 50px;
-}
+/* GRID LAYOUT */
 
 .grid {
   display: grid;
-  grid-template-columns: minmax(100px, 1300px) 1fr 250px;
-  height: 100vh; /* This ensures the grid takes the full height of the viewport */
+  grid-template-columns: minmax(100px, 1200px) 1fr 250px;
+  height: 100vh;
 }
 
-.side-text {
-  /* font-size: 200px; */
-  word-wrap: break-word;
-  overflow-wrap: break-word; /* Ensures compatibility across different browsers */
+.main-column {
+  background-color: var(--base-main-bg);
+  color: var(--base-main-text);
+  padding-left: 0;
+  margin-left: 0;
+}
+.center-column {
+  background-color: var(--base-main-bg);
+}
+.sidebar-column {
+  background-color: var(--base-sidebar-bg);
+  color: var(--base-sidebar-text);
 }
 
-.social {
-  display: block;
-  line-height: 1;
-  margin: 2px 0; /* Adjust this value as needed */
+/* HOME PAGE STYLGING */
+
+.main-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Adjust the gap between menu items */
+  margin-left: -2px;
+  padding-left: 0;
+  font-size: 24px;
 }
 
+/* MAIN COLUMN STYLING */
 
-.title {
-  text-align: left;
+.main-heading {
+  margin-top: -40px;
+  margin-left: -9px;
 }
 
-/* Home main section styles */
-.home-main {
-  background-color: #8afdaa; /* Example background color for home page */
-  padding: 2rem;
-  grid-column: 1;
+.main-column {
+  padding-left: 20px;
 }
 
-.home-main ~ .middle {
-  background-color: #8afdaa; /* Same color as home main */
-}
+/* SIDE BAR STYLING */
 
-/* Post main section styles */
-.post-main {
-  background-color: #fffacd; /* Example background color for post pages */
-  padding: 2rem;
-  grid-column: 1;
-}
-
-.post-main ~ .middle {
-  background-color: #fffacd; /* Same color as post main */
-}
-
-/* Sidebar styles */
-/* .sidebar {
-  background-color: #f4f4f4;
-  grid-column: 3;
-} */
-
-.sidebar {
-  background-color: #f4f4f4;  /* Default color for the home page */
-  /* Other sidebar styles */
-  line-height: 100px;
-  padding: 50px 10px;
-}
-
-.sidebar.post-sidebar {
-  background-color: #ffffff;  /* Different color for post pages */
-  /* Other sidebar styles for post pages */
-}
-
-.side-text {
-  color: black;  /* Example default color for the sidebar text */
-}
-
-
-.sidebar.post-sidebar .side-text {
-  color: rgb(225, 53, 53);  /* Example different color for the sidebar text on post pages */
+.social-links {
+  padding-left: 10px;
+  padding-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Adjust the gap between social links */
 }
 
 .big-side-text {
   font-size: 200px;
+  line-height: 170px;
   word-wrap: break-word;
   overflow-wrap: break-word; /* Ensures compatibility across different browsers */
-  line-height: 170px;
+  font-weight: var(--heading-weight);
+  padding-top: 0px;
+  padding-left: 5px;
 }
+
+/* VIDEO PLAYER STYLING */
 
 .video-wrapper {
   position: relative;
-  width: 100%;
+  width: calc(100% + 20px); /* Account for padding on main column */
+  left: -20px; /* Shift to the left to negate padding */
   padding-bottom: 56.25%; /* 16:9 aspect ratio */
   height: 0;
+  overflow: hidden;
 }
 
 .video-wrapper iframe {

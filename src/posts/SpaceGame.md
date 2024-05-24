@@ -2,11 +2,12 @@
 title: "Space Game"
 layout: layouts/post.njk
 order: 3
+colorScheme: 2
 ---
 
 
 <div class="video-wrapper">
-       <iframe width="560" height="315" src="https://www.youtube.com/embed/pWkxJq0wbS8?si=nBa0EGF539iz0HmU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe src="https://www.youtube.com/embed/pWkxJq0wbS8?si=nBa0EGF539iz0HmU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 <br>

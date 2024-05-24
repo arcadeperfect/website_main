@@ -1,13 +1,8 @@
 {% extends "layouts/base.njk" %}
 
-{% block styles %}
-<link rel="stylesheet" href="{{ site.pathPrefix }}css/post.css">
-{% endblock %}
-
 {% block main %}
 <article>
-    <h1>{{ title }}</h1>
-    <p>{{ date | date("MMMM D, YYYY") }}</p>
+    <h1 class="main-heading">{{ title }}</h1>
     <div>{{ content | safe }}</div>
 </article>
 {% endblock %}
