@@ -11,7 +11,7 @@ Blomp is a demo app for a library that allows Unity apps to be controlled by any
 
 <br>
 
-<img src="{{ site.pathPrefix }}images/blomp/03.gif" alt="Oh No!" class="fixed-width">
+<img src="{{ site.pathPrefix }}img/blomp/03.gif" alt="Oh No!" class="fixed-width">
 
 <br>
 
@@ -19,7 +19,7 @@ The phone scans a QR code displayed by the Unity app that contains network data.
 
 <br>
 
-<img src="{{ site.pathPrefix }}images/blomp/04.gif" alt="Oh No!" class="fixed-width">
+<img src="{{ site.pathPrefix }}img/blomp/04.gif" alt="Oh No!" class="fixed-width">
 
 <br>
 
@@ -27,7 +27,7 @@ The phone then negotiates a websocket connection with the Unity app and data can
 
 <br>
 
-<img src="{{ site.pathPrefix }}images/blomp/05.gif" alt="Oh No!" class="fixed-width">
+<img src="{{ site.pathPrefix }}img/blomp/05.gif" alt="Oh No!" class="fixed-width">
 
 <br>
 
@@ -39,7 +39,7 @@ You can control the size of your face with a slider and trigger a "blomp" with a
 
 <br>
 
-<img src="{{ site.pathPrefix }}images/blomp/02.gif" alt="Oh No!" class="fixed-width">
+<img src="{{ site.pathPrefix }}img/blomp/02.gif" alt="Oh No!" class="fixed-width">
 
 
 
