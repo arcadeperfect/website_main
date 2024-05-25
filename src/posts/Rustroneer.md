@@ -12,7 +12,7 @@ colorScheme: 2
 
 <br>
 
-Rustroneer is a 2D planet generator inspired by [Astroneer](https://www.youtube.com/watch?v=0KXQZG7riEs&t=1s), written in Rust using the Bevy game engine. 
+Rustroneer is a 2D planet generator inspired by [Astroneer](https://www.youtube.com/watch?v=0KXQZG7riEs&t=1s), written in Rust using the [Bevy](https://bevyengine.org) game engine. 
 
 <br>
 
@@ -39,7 +39,7 @@ In my version, I do the following:
 
 <br>
 
-- Generate base planet with 2D voxels (hereafter referred to as pixels) based on a perlin noise function calculating distance from teh center of tha map, to give me basic surface terrain.
+- Generate base planet with 2D voxels (hereafter referred to as pixels) based on a perlin noise function calculating distance from the center of the map, to give me basic surface terrain.
 - Run a cellular automata algorithm to generate cave systems.
 - Identify each cafe using a flood fill algorithm, which gives me meta data about each cave such as the center of each cave
 - Use a MST to generate a tunnel system, and subtract that from the pixel map
@@ -53,7 +53,7 @@ As the underlying map is just an image, this allows the user to modify the terra
 
 <br>
 
-There are many things I'd like to add and improve such as
+Next steps:
 
 - More sophisticated terrain, with regions like mountain, hill, flat plains, etc
 - Vegetation and other props, which respect biomes

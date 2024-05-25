@@ -2,8 +2,19 @@
 title: "Blomp"
 layout: layouts/post.njk
 order: 4
-colorScheme: 4
+colorScheme: 3
 ---
+
+<style>
+
+.fixed-width {
+  width: 800px; /* Set the desired width */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Ensures each image is on its own line */
+  margin-bottom: 10px; /* Optional: Adds space between images */
+}
+
+</style>
 
 <br>
 
