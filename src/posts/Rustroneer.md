@@ -5,6 +5,13 @@ order: 2
 colorScheme: 2
 ---
 
+<div class="video-wrapper">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/LJN3EgiLoIY?si=WCSg9n9OQ3ogh2ls" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+
+<br>
+
 Rustroneer is a 2D planet generator inspired by [Astroneer](https://www.youtube.com/watch?v=0KXQZG7riEs&t=1s), written in Rust using the Bevy game engine. 
 
 <br>
