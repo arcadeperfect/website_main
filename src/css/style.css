@@ -4,6 +4,9 @@
   --base-sidebar-bg: white;
   --base-sidebar-text: black;
   --heading-weight: normal;
+
+  --accent-main: #1fe0ac;
+  --accent-sidebar: #00ff15;
 }
 
 /* Alternate Color Scheme 1 */
@@ -12,6 +15,8 @@
   --base-main-text: #f50000;
   --base-sidebar-bg: #333;
   --base-sidebar-text: #f0f8ff;
+  --accent-main: #f50000;
+  --accent-sidebar: #00ff15;
 }
 
 /* Alternate Color Scheme 2 */
@@ -20,6 +25,8 @@
   --base-main-text: #111;
   --base-sidebar-bg: #111;
   --base-sidebar-text: #ffebcd;
+  --accent-main: #e58a29;
+  --accent-sidebar: #00ff15;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
@@ -93,6 +100,11 @@ p {
   padding-left: 0;
   margin-left: 0;
 }
+
+.main-column a {
+  color: var(--accent-main);
+}
+
 .center-column {
   background-color: var(--base-main-bg);
 }
@@ -119,6 +131,10 @@ a:hover{
 }
 
 /* MAIN COLUMN STYLING */
+
+li{
+  list-style-type: square;
+}
 
 .main-heading {
   margin-top: -40px;

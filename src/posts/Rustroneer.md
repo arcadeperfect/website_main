@@ -5,6 +5,52 @@ order: 2
 colorScheme: 2
 ---
 
-Rustroneer is 2D planet generator inspired by Astroneer, written in Bevy for Rust!
+Rustroneer is a 2D planet generator inspired by [Astroneer](https://www.youtube.com/watch?v=0KXQZG7riEs&t=1s), written in Rust using the Bevy game engine. 
 
-purus semper eget duis at tellus at urna condimentum mattis pellentesque id nibh tortor id aliquet lectus proin nibh nisl condimentum id venenatis a condimentum vitae sapien pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas sed tempus urna et pharetra pharetra massa massa ultricies mi quis hendrerit dolor magna eget est lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas integer eget aliquet nibh praesent tristique magna sit amet purus gravida quis blandit turpis cursus in hac habitasse platea dictumst quisque sagittis purus sit amet volutpat consequat mauris nunc congue nisi vitae suscipit tellus mauris a diam maecenas sed enim ut sem viverra aliquet eget sit amet tellus cras adipiscing enim eu turpis egestas pretium aenean pharetra magna ac placerat vestibulum lectus mauris ultrices eros in cursus turpis massa tincidunt dui ut ornare lectus sit amet est placerat in egestas erat imperdiet sed euismod nisi porta lorem mollis aliquam ut porttitor leo a diam sollicitudin tempor id eu nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget felis eget nunc lobortis mattis aliquam faucibus purus in massa tempor nec feugiat nisl pretium fusce id velit ut tortor pretium viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus in hac habitasse platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue eget arcu dictum varius duis at consectetur lorem donec massa sapien faucibus et molestie ac feugiat sed lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare massa eget egestas purus viverra accumsan in nisl nisi scelerisque eu ultrices vitae auctor eu augue ut lectus arcu bibendum at varius vel pharetra vel turpis nunc eget lorem dolor sed viverra ipsum nunc aliquet bibendum enim facilisis gravida neque convallis a cras semper auctor neque vitae tempus quam pellentesque nec nam aliquam sem et tortor consequat id porta nibh venenatis cras sed felis eget velit aliquet sagittis id consectetur purus ut faucibus pulvinar elementum integer enim neque volutpat ac tincidunt vitae semper quis lectus nulla at volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non blandit massa enim nec dui nunc mattis enim ut tellus elementum sagittis vitae et leo duis ut diam quam nulla porttitor massa id neque aliquam vestibulum morbi blandit cursus risus at ultrices mi tempus imperdiet nulla malesuada pellentesque elit eget gravida cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus mauris vitae ultricies leo integer malesuada nunc vel risus commodo viverra maecenas accumsan lacus vel facilisis volutpat est velit egestas dui id ornare arcu odio ut sem nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est
+<br>
+
+My best guess is that Astroneer's procedural generation pipeline is something like:
+
+<br>
+
+- Generate base planet terrain from voxels using some form of noise, domain warping
+- Run post processing of some form to add features, hollow out the cave systems
+- Mesh the voxels using marching cubes
+- Spawn props such as foliage, decorations (some form of domain meta data must exist so it can determine what to spawn where)
+
+<br>
+
+The nice thing about this is that the underlying voxels can be modified at runtime time somewhat trivially, and the marching cubes algorithm is fast enough to run in real time, therefore allowing the player to deform the planet.
+
+<br>
+
+All of these concepts have 2D equivalents! So I thought I'd have a go at creating a 2D version in the style of my [Space Game](/posts/SpaceGame) prototype.
+
+<br>
+
+In my version, I do the following:
+
+<br>
+
+- Generate base planet with 2D voxels (hereafter referred to as pixels) based on a perlin noise function calculating distance from teh center of tha map, to give me basic surface terrain.
+- Run a cellular automata algorithm to generate cave systems.
+- Identify each cafe using a flood fill algorithm, which gives me meta data about each cave such as the center of each cave
+- Use a MST to generate a tunnel system, and subtract that from the pixel map
+- Run image processing (blur, domain warp)
+- Mesh using marching squares, also generate colliders
+- Render with a simple line shader
+
+<br>
+
+As the underlying map is just an image, this allows the user to modify the terrain like in Astroneer by effectively painting on the image and rerunning the meshing algorithm. Pretty neat!
+
+<br>
+
+There are many things I'd like to add and improve such as
+
+- More sophisticated terrain, with regions like mountain, hill, flat plains, etc
+- Vegetation and other props, which respect biomes
+- Creatures that can interact with the environment, burrow into the terrain etc
+- Water (not sure how...)
+- Optimize the meshing so that the whole thing doesn't get re-meshed every time a change happens, which will allow for much bigger and higher detail worlds
+- Build for wasm so I can run it here!

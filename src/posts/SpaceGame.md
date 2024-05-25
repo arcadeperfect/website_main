@@ -27,6 +27,6 @@ HUD inspired by Neon Genesis.
 
 <br>
 
-It also gave birth to Rustroneer which is less about the game and more about the procedural world generation. 
+It also gave birth to [Rustroneer](/posts/Rustroneer/). 
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
