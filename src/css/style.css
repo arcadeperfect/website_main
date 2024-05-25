@@ -15,7 +15,7 @@
   --base-main-text: #f50000;
   --base-sidebar-bg: #333;
   --base-sidebar-text: #f0f8ff;
-  --accent-main: #f50000;
+  --accent-main: #06ff0e;
   --accent-sidebar: #00ff15;
 }
 
@@ -82,7 +82,7 @@ h1 {
 
 p {
   font-size: 17px;
-  max-width: 650px;
+  /* max-width: 650px; */
 }
 
 /* GRID LAYOUT */
@@ -131,6 +131,20 @@ a:hover{
 }
 
 /* MAIN COLUMN STYLING */
+
+.main-column p,
+.main-column ul,
+.main-column ol,
+.main-column li{
+/* .main-column h1, */
+/* .main-column h2, */
+/* .main-column h3, */
+/* .main-column h4, */
+/* .main-column h5, */
+/* .main-column h6 */
+
+  max-width: 750px; /* Adjust the max width as needed */
+}
 
 li{
   list-style-type: square;
@@ -186,4 +200,13 @@ li{
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+
+
+.fixed-width {
+  width: 800px; /* Set the desired width */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Ensures each image is on its own line */
+  margin-bottom: 10px; /* Optional: Adds space between images */
 }

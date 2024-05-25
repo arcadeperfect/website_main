@@ -16,6 +16,7 @@ module.exports = function(eleventyConfig) {
   // Copy the `css` directory to the output `_site` directory
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/CNAME");
+  eleventyConfig.addPassthroughCopy("src/img");
 
   return {
     // pathPrefix: "/website_01/",  // Add your repository name here if it’s a project site
