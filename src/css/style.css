@@ -9,6 +9,16 @@
   --accent-sidebar: #00ff15;
 }
 
+
+.color-scheme-home {
+  --base-main-bg: #222;
+  --base-main-text: #EEE;
+  --base-sidebar-bg: #EEE;
+  --base-sidebar-text: #222;
+  --accent-main: #EEE;
+  --accent-sidebar: #00ff15;
+}
+
 /* Alternate Color Scheme 1 */
 .color-scheme-1 {
   --base-main-bg: #f0f8ff;
