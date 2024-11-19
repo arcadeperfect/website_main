@@ -31,7 +31,7 @@ The nice thing about this is that the underlying voxels can be modified at runti
 
 <br>
 
-All of these concepts have 2D equivalents! So I thought I'd have a go at creating a 2D version in the style of my [Space Game](/posts/SpaceGame) prototype.
+All of these concepts have 2D equivalents. So I thought I'd have a go at creating a 2D version in the style of my [Space Game](/posts/SpaceGame) prototype.
 
 <br>
 
