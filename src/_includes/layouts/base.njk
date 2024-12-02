@@ -16,7 +16,10 @@
         window.onload = function() {
             const bigSideTextElement = document.querySelector('.big-side-text');
             if (bigSideTextElement) {
-                bigSideTextElement.textContent = randomizeCapitalization('alexharding');
+                {# bigSideTextElement.textContent = randomizeCapitalization('alexharding'); #}
+                bigSideTextElement.textContent = randomizeCapitalization(
+                    'alexharding'
+                    );
             }
         }
     </script>
