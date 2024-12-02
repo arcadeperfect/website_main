@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Blomp</title>
+    <script>
+        function randomizeCapitalization(str) {
+            return str.split('').map(char => Math.random() > 0.5 ? char.toUpperCase() : char.toLowerCase()).join('');
+        }
+
+        window.onload = function() {
+            const bigSideTextElement = document.querySelector('.big-side-text');
+            if (bigSideTextElement) {
+                
+                bigSideTextElement.textContent = randomizeCapitalization(
+                    'alexharding'
+                    );
+            }
+        }
+    </script>
+</head>
+<body class="color-scheme-3">
+    <div class="grid">
+        <div class="grid-item main-column">
+            
+<article class="content">
+    <h1 class="main-heading">Blomp</h1>
+    <div><style>
+
+.fixed-width {
+  width: 800px; /* Set the desired width */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Ensures each image is on its own line */
+  margin-bottom: 10px; /* Optional: Adds space between images */
+}
+
+</style>
+<br>
+<p>Blomp is a demo app for a library that allows Unity apps to be controlled by any phone with the companion phone app written in Flutter.</p>
+<br>
+<img src="/img/blomp/03.gif" alt="Oh No!" class="fixed-width">
+<br>
+<p>The phone scans a QR code displayed by the Unity app that contains network data.</p>
+<br>
+<img src="/img/blomp/04.gif" alt="Oh No!" class="fixed-width">
+<br>
+<p>The phone then negotiates a websocket connection with the Unity app and data can be sent bidirectionally. It can be float, int, string, or binary.</p>
+<br>
+<img src="/img/blomp/05.gif" alt="Oh No!" class="fixed-width">
+<br>
+<p>In this example, the phone allows you to take a selfie, which gets transmitted to the Unity app and becomes an entity you can control.
+<br>
+You can control the size of your face with a slider and trigger a &quot;blomp&quot; with a button.</p>
+<br>
+<img src="/img/blomp/02.gif" alt="Oh No!" class="fixed-width">
+</div>
+</article>
+
+        </div>
+        
+        <div class="grid-item sidebar-column">
+            <div class="social-links">
+                <div><a href="https://bsky.app/profile/alexharding.bsky.social">Bluesky</a></div>
+                <div><a href="mailto:alexander.harding@gmail.com">Email</a></div>
+                <div><a href="https://www.instagram.com/wash_your_manipulators/">Instagram</a></div>
+            </div>
+            <a href="/" class="big-side-text">alexharding</a>
+        </div>
+    </div>
+</body>
+</html>

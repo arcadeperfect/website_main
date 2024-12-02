@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>VFX</title>
+    <script>
+        function randomizeCapitalization(str) {
+            return str.split('').map(char => Math.random() > 0.5 ? char.toUpperCase() : char.toLowerCase()).join('');
+        }
+
+        window.onload = function() {
+            const bigSideTextElement = document.querySelector('.big-side-text');
+            if (bigSideTextElement) {
+                
+                bigSideTextElement.textContent = randomizeCapitalization(
+                    'alexharding'
+                    );
+            }
+        }
+    </script>
+</head>
+<body class="color-scheme-1">
+    <div class="grid">
+        <div class="grid-item main-column">
+            
+<article class="content">
+    <h1 class="main-heading">VFX</h1>
+    <div><div class="video-wrapper">
+<iframe src="https://player.vimeo.com/video/263148312?h=6c19bed3e2" width="640" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+</div>
+<br>
+Senior VFX compositing artist with extensive experience
+<p>Nuke</p>
+<p>Flame</p>
+<p>Shoots</p>
+</div>
+</article>
+
+        </div>
+        
+        <div class="grid-item sidebar-column">
+            <div class="social-links">
+                <div><a href="https://bsky.app/profile/alexharding.bsky.social">Bluesky</a></div>
+                <div><a href="mailto:alexander.harding@gmail.com">Email</a></div>
+                <div><a href="https://www.instagram.com/wash_your_manipulators/">Instagram</a></div>
+            </div>
+            <a href="/" class="big-side-text">alexharding</a>
+        </div>
+    </div>
+</body>
+</html>
